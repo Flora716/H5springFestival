@@ -1,0 +1,169 @@
+@import "common";
+@import "action";
+@import "page01";
+@import "page02";
+@import "page03";
+@import "page04";
+@import "page05";
+@import "page06";
+@import "page07";
+@import "page08";
+@import "page09";
+@import "page10";
+
+$bg-color1: #D12C2A;
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: {
+
+    x: hidden;
+    y: hidden;
+  };
+  position: absolute;
+}
+
+.loading-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+  background-color: $bg-color1;
+}
+
+.loading {
+  //@include fnIconSprite(common_loading);
+  //margin: -12px 0 0 -12px;
+  //@media (min-width: 768px) {
+  //  @include fnIcon2xSprite(common_loading);
+  //  margin: -24px 0 0 -24px;
+  //}
+  //top: 50%;
+  //left: 50%;
+  background-image: url(../images/loading.png);
+  background-position: 0 0;
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+  background-size: 122px;
+}
+
+.loading-text {
+  //@include fnIconSprite(common_loading_word);
+  //margin: 25px 0 0 -50px;
+  //@media (min-width: 768px) {
+  //  @include fnIcon2xSprite(common_loading_word);
+  //  margin: 50px 0 0 -100px;
+  //}
+  //top: 50%;
+  //left: 50%;
+  background-image: url(../images/loading.png);
+  background-position: -23px 0;
+  width: 99px;
+  height: 11px;
+  top: 50%;
+  left: 50%;
+  margin: 25px 0 0 -50px;
+  background-size: 122px;
+}
+
+.hardWare {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.notice-swipe-up {
+  @include fnIconSprite(common_notice_arrow);
+  margin-left: -20px;
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(common_notice_arrow);
+    margin-left: -40px;
+  }
+  z-index: 2;
+  bottom: 12px;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-list {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+
+.content-li {
+  list-style: none;
+  width: 100%;
+  position: relative;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+
+.page {
+  $width: 320px;
+  $margin-left: -160px;
+  position: absolute;
+  width: $width;
+  margin-left: $margin-left;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  @media (min-width: 768px) {
+    width: $width*2;
+    margin-left: $margin-left*2;
+  }
+}
+
+.share-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.share-guide {
+  position: absolute;
+  background: url(../images/bg_share.png);
+  width: 239px;
+  height: 96px;
+  -webkit-background-size: 239px 96px;
+  background-size: 239px 96px;
+  top: 10px;
+  right: 26px;
+}
+
+.speaker {
+  $right: 10px;
+  $top: 8px;
+  right: $right;
+  top: $top;
+  @media (min-width: 768px) {
+    right: $right*2;
+    top: $top*2;
+  }
+  z-index: 2;
+  opacity: 1;
+}
+
+.speak_opened {
+  @include fnIconSprite(speaker);
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(speaker);
+  }
+}
+
+.speak_closed {
+  @include fnIconSprite(speaker_close);
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(speaker_close);
+  }
+}

@@ -1,0 +1,253 @@
+@import "compass/css3";
+
+@-webkit-keyframes eleCircle {
+  0% {
+    -webkit-transform: rotate(0deg)
+  }
+
+  20% {
+    -webkit-transform: rotate(72deg)
+  }
+
+  40% {
+    -webkit-transform: rotate(144deg)
+  }
+
+  60% {
+    -webkit-transform: rotate(216deg)
+  }
+
+  80% {
+    -webkit-transform: rotate(288deg)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes eleCircle {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  20% {
+    transform: rotate(72deg)
+  }
+
+  40% {
+    transform: rotate(144deg)
+  }
+
+  60% {
+    transform: rotate(216deg)
+  }
+
+  80% {
+    transform: rotate(288deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+//旋转
+.eleCircle {
+  @include animation(eleCircle 2s linear infinite)
+}
+
+@-webkit-keyframes swipeMove {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,5px,0)
+  }
+
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-8px,0)
+  }
+}
+
+@keyframes swipeMove {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,5px,0)
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate3d(0,0,0)
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0,-8px,0)
+  }
+}
+
+//上下来回移动
+.swipeMove {
+  @include animation(swipeMove 1s ease-in infinite)
+}
+
+//向上显示
+.riseUp {
+  opacity: 1!important;
+  @include transform(translate3d(0,0,0)!important);
+  @include transition(all 1.5s ease-out);
+}
+
+//显示
+.fadeIn {
+  opacity: 1;
+}
+
+//向右显示
+.bubble_show {
+  opacity: 1!important;
+  @include transform(scale(1) translate3d(0,0,0));
+  @include transition(all .2s ease-out);
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate3d(0,0,1,0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0,0,1,-25deg)
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate3d(0,0,1,0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0,0,1,-25deg)
+  }
+}
+
+//左右摇摆
+.swing {
+  @include transform-origin(45px 0);
+  @include animation(swing 1.2s ease-in-out alternate infinite);
+}
+
+@-webkit-keyframes scanner {
+  0% {
+    -webkit-transform: translate3d(0,0,0)
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,80px,0)
+  }
+}
+
+@keyframes scanner {
+  0% {
+    transform: translate3d(0,0,0)
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,80px,0)
+  }
+}
+
+//由上方移动到下方
+.scanner {
+  @include animation(scanner 1s ease-in-out infinite);
+}
+
+@-webkit-keyframes bigger {
+  0% {
+    -webkit-transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.2);
+  }
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.2);
+  }
+}
+
+//放大缩小
+.bigger {
+  @include animation(bigger 1s ease-in-out infinite);
+}
+
+@-webkit-keyframes smokeMove {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,100px,0)
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(50px,-100px,0)
+  }
+}
+
+@keyframes smokeMove {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100px,0)
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(50px,-100px,0)
+  }
+}
+
+//烟雾轨迹
+.smokeMove {
+  @include animation(smokeMove 3s ease-in-out infinite);
+}
+
+.bubble_l {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0
+}
+
+.bubble_r {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0
+}
+
+.bubble_show {
+  opacity: 1;
+  -webkit-transform: scale(1) translate3d(0,0,0);
+  transform: scale(1) translate3d(0,0,0);
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out
+}

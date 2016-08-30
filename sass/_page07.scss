@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:nth-child(7) {
+    background-image: url(../images/bg_yellow.jpg);
+  }
+}
+
+.p7 {
+  .p7__t_1 {
+    $left: 78px;
+    margin-top: 1rem;
+    @include fnIconSprite(page7_title1);
+    @include up();
+    top: 4%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page7_title1);
+      left: $left*2;
+    }
+  }
+  .p7__t_3 {
+    margin-top: 10rem;
+  }
+  .p7__dialogue {
+    $width: 230px;
+    $left: 43px;
+    top: 53%;
+    width: $width;
+    left: $left;
+    opacity: 0;
+    @media (min-width: 768px) {
+      width: $width*2;
+      left: $left*2;
+    }
+    .p7__speak_1 {
+      @include fnIconSprite(page7_speak3);
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page7_speak3);
+      }
+    }
+    .p7__speak_2 {
+      $margin-left: 143px;
+      @include fnIconSprite(page7_speak2);
+      margin-left: $margin-left;
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page7_speak2);
+        margin-left: $margin-left*2;
+      }
+    }
+    .p7__speak_3 {
+      @include fnIconSprite(page7_speak1);
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page7_speak1);
+      }
+    }
+  }
+}
+
+.p7__opera {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 50%;
+  top: 15%;
+}
+.p7__opera_normal {
+  background-image: url(../images/page7_opera.png);
+}
+.p7__opera_scale {
+  background-image: url(../images/page7_opera_scale.png);
+}
+
+.p7__friends {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-image: url(../images/page7_friends.png);
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 50%;
+  right: 0;
+  bottom: 0;
+}
+
+.p7__t_4 {
+  @include fnIconSprite(common_word1);
+  bottom: 74%;
+  left: 2%;
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(common_word1);
+  }
+}
+

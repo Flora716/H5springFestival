@@ -1,0 +1,4 @@
+@import "compass/utilities/sprites";
+$icons: sprite-map("icons/*.png", $spacing: 2px);
+$icons2x: sprite-map("icons2x/*.png", $spacing: 4px);
+

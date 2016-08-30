@@ -1,0 +1,67 @@
+/*
+Error: File to import not found or unreadable: compass/css3.
+       Load path: E:/Ç°¶ËÁ·Ï°/ÐÂÄê×£ºØH5Ðû´«Ò³/spring_festival/sass
+        on line 1 of E:/Ç°¶ËÁ·Ï°/ÐÂÄê×£ºØH5Ðû´«Ò³/spring_festival/sass/_common.scss
+        from line 1 of E:\Ç°¶ËÁ·Ï°\ÐÂÄê×£ºØH5Ðû´«Ò³\spring_festival\sass\index.scss
+
+1: @import "common";
+2: @import "action";
+3: @import "page01";
+4: @import "page02";
+5: @import "page03";
+6: @import "page04";
+
+Backtrace:
+E:/Ç°¶ËÁ·Ï°/ÐÂÄê×£ºØH5Ðû´«Ò³/spring_festival/sass/_common.scss:1
+E:\Ç°¶ËÁ·Ï°\ÐÂÄê×£ºØH5Ðû´«Ò³\spring_festival\sass\index.scss:1
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:37:in `css_import?'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `map'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:88:in `block in with_import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:88:in `with_import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:369:in `_render_with_sourcemap'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:286:in `render_with_sourcemap'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+D:/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+D:/Koala/bin/sass:18:in `load'
+D:/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: compass/css3.\A        Load path: E:/Ç°¶ËÁ·Ï°/ÐÂÄê×£ºØH5Ðû´«Ò³/spring_festival/sass\A         on line 1 of E:/Ç°¶ËÁ·Ï°/ÐÂÄê×£ºØH5Ðû´«Ò³/spring_festival/sass/_common.scss\A         from line 1 of E:\Ç°¶ËÁ·Ï°\ÐÂÄê×£ºØH5Ðû´«Ò³\spring_festival\sass\index.scss\A \A 1: @import \"common\";\A 2: @import \"action\";\A 3: @import \"page01\";\A 4: @import \"page02\";\A 5: @import \"page03\";\A 6: @import \"page04\";"; }

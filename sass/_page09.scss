@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:nth-child(9) {
+    background-color: #EEDFB8;
+  }
+}
+
+.p9 {
+  width: 100%;
+  margin-left: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  color: #F5AC39;
+  .p9__red_banner {
+    width: 100%;
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+    background-color: #e70612;
+  }
+  .p9__t_1 {
+    margin: auto;
+    @include fnIconSprite(page9_title0);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_title0);
+    }
+  }
+  .p9__t_2 {
+    margin: auto;
+    margin-top: 5px;
+    @include fnIconSprite(page9_title1);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_title1);
+    }
+  }
+  .p9__t_3 {
+    margin: auto;
+    margin-top: 5px;
+    @include fnIconSprite(page9_title2);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_title2);
+    }
+  }
+  .p9__banner {
+    background-image: url(../images/page9_lantern.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  .p9__banner img {
+    width: 100%;
+    visibility: hidden;
+  }
+  .p9__t_4 {
+    font-size: 1.4rem;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    //@include fnIconSprite(page9_title3);
+    //@media (min-width: 768px) {
+    //  @include fnIcon2xSprite(page9_title3);
+    //}
+  }
+  .p9__primary_word {
+    color: #E80813;;
+  }
+  .p9__t_5 {
+    margin: auto;
+    font-size: 1.2rem;
+    text-align: center;
+    //@include fnIconSprite(page9_title4);
+    //@media (min-width: 768px) {
+    //  @include fnIcon2xSprite(page9_title4);
+    //}
+  }
+  .p9__t_6 {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    //@include fnIconSprite(page9_title5);
+    //@media (min-width: 768px) {
+    //  @include fnIcon2xSprite(page9_title5);
+    //}
+  }
+  .p9__t_6 span {
+    font-size: 1.2rem;
+    background-color: #E80813;;
+  }
+  .p9__lantern {
+    margin: auto;
+    margin-top: 1px;
+    @include fnIconSprite(page9_lantern_left);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_lantern_left);
+    }
+  }
+  .p9__lantern_left {
+    @include fnIconSprite(page9_lantern_left);
+    height: 43px;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_lantern_left);
+      height: 86px;
+    }
+  }
+  .p9__lantern_right {
+    @include fnIconSprite(page9_lantern_right);
+    height: 43px;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_lantern_right);
+      height: 86px;
+    }
+  }
+  .p9__print_wrap {
+    margin: auto;
+    $margin-top: 20px;
+    margin-top: $margin-top;
+    position: relative;
+    @include fnIconSprite(page9_print_wrap);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_print_wrap);
+      margin-top: $margin-top*2;
+    }
+  }
+  .p9__print {
+    margin: auto;
+    $top: 10px;
+    $left: 22px;
+    top: $top;
+    left: $left;
+    @include fnIconSprite(page9_finger);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_finger);
+      top: $top*2;
+      left: $left*2;
+    }
+  }
+  .p9__scanner {
+    margin: auto;
+    @include fnIconSprite(page9_print_banner);
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page9_print_banner);
+    }
+  }
+  .p9__logo {
+    background-image: url(../images/logo2.png);
+    background-repeat: no-repeat;
+    width: 8rem;
+    height: 8rem;
+    background-size: 100% 100%;
+    top: 0;
+  }
+}

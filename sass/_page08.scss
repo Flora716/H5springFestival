@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:nth-child(8) {
+    background-image: url(../images/bg_yellow.jpg);
+  }
+}
+
+.p8 {
+  .p8__t_1 {
+    $left: 118px;
+    @include fnIconSprite(page8_title1);
+    @include up();
+    top: 8%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page8_title1);
+      left: $left*2;
+    }
+  }
+  .p8__t_3 {
+    margin-top: 8rem;
+  }
+  .p8__dialogue {
+    $width: 230px;
+    $left: 43px;
+    top: 35%;
+    width: $width;
+    left: $left;
+    opacity: 0;
+    z-index: 99;
+    @media (min-width: 768px) {
+      width: $width*2;
+      left: $left*2;
+    }
+    .p8__speak_1 {
+      @include fnIconSprite(page8_speak1);
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page8_speak1);
+      }
+    }
+    .p8__speak_2 {
+      $margin-left: 94px;
+      @include fnIconSprite(page8_speak2);
+      margin-left: $margin-left;
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page8_speak2);
+        margin-left: $margin-left*2;
+      }
+    }
+    .p8__speak_3 {
+      @include fnIconSprite(page8_speak3);
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page8_speak3);
+      }
+    }
+    .p8__speak_4 {
+      $margin-left: 18px;
+      @include fnIconSprite(page8_speak4);
+      margin-left: $margin-left;
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page8_speak4);
+        margin-left: $margin-left*2;
+      }
+    }
+    .p8__speak_5 {
+      @include fnIconSprite(page8_speak5);
+      @media (min-width: 768px) {
+        @include  fnIcon2xSprite(page8_speak5);
+      }
+    }
+  }
+}
+
+.p8__cloud_2 {
+  @include up();
+  background-image: url(../images/common_cloud_big.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 60%;
+  height: 35%;
+  bottom: 36%;
+  left: 8%;
+}
+
+.p8__grandparent {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-image: url(../images/page8_grandparent.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 45%;
+  right: 0;
+  bottom: 0;
+}
+
+.p8__t_4 {
+  @include fnIconSprite(common_word1);
+  bottom: 74%;
+  left: 2%;
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(common_word1);
+  }
+}
+

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:nth-child(5) {
+    background-image: url(../images/bg_old.jpg);
+  }
+}
+
+.p5 {
+  .p5__t_1 {
+    $left: 115px;
+    @include fnIconSprite(page5_title1);
+    top: 4%;
+    left: $left;
+    @include up();
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page5_title1);
+      left: $left*2;
+    }
+  }
+}
+
+.p5__petal {
+  background-image: url(../images/page5_petal.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 50%;
+  left: -10%;
+  top: -13%;
+  z-index: 9;
+}
+.p5__father {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-image: url(../images/page5_father.png);
+  background-size: contain;
+  left: 32%;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 50%;
+  bottom: -1px;
+  z-index: 2;
+}
+
+.p5__t_4 {
+  @include fnIconSprite(common_word1);
+  bottom: 2%;
+  left: 2%;
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(common_word1);
+  }
+}
+
+.p5__road {
+  background-image: url(../images/page5_road.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 60%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+

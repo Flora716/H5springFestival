@@ -1,0 +1,98 @@
+
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:first-child {
+    background-image: url(../images/bg_red.jpg);
+  }
+}
+
+.p1 {
+  .p1__cloud_1, .p1__cloud_2 {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  .p1__cloud_1 {
+    $width: 82px;
+    $height: 63px;
+    $left: 40px;
+    background-image: url(../images/common_cloud_tiny.png);
+    width: $width;
+    height: $height;
+    left: $left;
+    top: 18%;
+    //@include down();
+    @media (min-width: 768px) {
+      width: $width*2;
+      height: $height*2;
+      left: $left*2;
+    }
+  }
+  .p1__cloud_2 {
+    $width: 178px;
+    $height: 149px;
+    $left: 23px;
+    background-image: url(../images/common_cloud_big.png);
+    width: $width;
+    height: $height;
+    left: $left;
+    bottom: 8%;
+    //@include up();
+    @media (min-width: 768px) {
+      width: $width*2;
+      height: $height*2;
+      left: $left*2;
+    }
+  }
+
+  .p1__t_1, .p1__t_2, .p1__t_3, .p1__t_4 {
+    z-index: 9;
+  }
+  .p1__t_1 {
+    $left: 78px;
+    @include fnIconSprite(page1_title01);
+    //@include down();
+    top: 18%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page1_title01);
+      left: $left*2;
+    }
+  }
+  .p1__t_2 {
+    $left: 30px;
+    @include fnIconSprite(page1_title02);
+    //@include down();
+    top: 32%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page1_title02);
+      left: $left*2;
+    }
+  }
+  .p1__t_3 {
+    $left: 174px;
+    @include fnIconSprite(page1_title03);
+    //@include down();
+    top: 27%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page1_title03);
+      left: $left*2;
+    }
+  }
+  .p1__t_4 {
+    $left: 103px;
+    @include fnIconSprite(page1_title04);
+    //@include down();
+    top: 45%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page1_title04);
+      left: $left*2;
+    }
+  }
+}

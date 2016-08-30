@@ -1,0 +1,142 @@
+@import "compass/css3";
+@import "icon";
+
+/* reste */
+html {
+  font-size: 62.5%;
+}
+
+p {
+  margin: 0;
+  padding: 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  font-size: 1.4rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin: 0;
+  font-family:"SimHei","Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif,"宋体";
+  color: rgb(79, 79, 79);
+}
+
+img {
+  vertical-align: top;
+}
+
+a:visited, a:hover, a:link, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.part {
+  position: absolute;
+}
+
+.speak {
+  margin: {
+    top: 5px;
+  }
+}
+
+.btn {
+  width: 40%;
+  height: 3rem;
+  margin: 3%;
+  border-radius: 0.5rem;
+  -moz-border-radius: 2px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.8rem;
+}
+
+.title {
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.t1 {
+  margin: 1rem auto;
+  margin-top: 3rem;
+}
+
+.t2 {
+  color: #F5AC39;
+}
+
+.t3 {
+  color: #B88B54;
+}
+
+.t3 p{
+  font-size: 1.4rem;
+}
+
+.fadeIn {
+  opacity: 1!important;
+}
+
+.fadeOut {
+  opacity: 0!important;
+}
+
+$small-icon: "icons-s94f4a5081f.png";
+
+@mixin fnIconSprite($name){ // 传入icon名称
+  width: image-width(sprite-file($icons, $name)); // icon宽度
+  height: image-height(sprite-file($icons, $name)); // icon高度
+  background-image: sprite-url($icons2x);  // *引用大图的拼接图片(如果使用小图会出现模糊的情况)
+  background-position: sprite-position($icons, $name);
+  background-size: image-width($small-icon) image-height($small-icon); // *缩放引用的大图至小图的大小
+};
+
+@mixin fnIcon2xSprite($name){  //大图的引用基本不用做太大的修改
+  width: image-width(sprite-file($icons2x, $name));
+  height: image-height(sprite-file($icons2x, $name));
+  background-image: sprite-url($icons2x);
+  background-position: sprite-position($icons2x, $name);
+  background-size: auto;  // 这里需要覆盖一下
+};
+
+@mixin down() {
+  -webkit-transform: translate3d(0,-200px,0);
+  transform: translate3d(0,-200px,0);
+  opacity: 0;
+}
+
+@mixin up() {
+  -webkit-transform: translate3d(0,200px,0);
+  transform: translate3d(0,200px,0);
+  opacity: 0;
+}
+
+.down {
+  @include down();
+}
+
+.up {
+  @include up();
+}
+
+.scale15 {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+

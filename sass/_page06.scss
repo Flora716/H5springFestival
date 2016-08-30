@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:nth-child(6) {
+    background-image: url(../images/bg_old.jpg);
+  }
+}
+
+.p6 {
+  .p6__t_1 {
+    $left: 115px;
+    margin-top: 1rem;
+    @include fnIconSprite(page6_title1);
+    @include up();
+    top: 4%;
+    left: $left;
+    @media (min-width: 768px) {
+      @include fnIcon2xSprite(page6_title1);
+      left: $left*2;
+    }
+  }
+}
+
+.p6__fire {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-image: url(../images/page6_fire.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 18%;
+  bottom: 35%;
+}
+
+.p6__food {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-image: url(../images/page6_food.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 32%;
+  right: 0;
+  bottom: 5%;
+}
+
+.p6__t_4 {
+  @include fnIconSprite(common_word1);
+  bottom: 60%;
+  left: 2%;
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(common_word1);
+  }
+}
+

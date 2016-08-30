@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@import "common";
+
+.content-li {
+  &:nth-child(2) {
+    background-image: url(../images/bg_red.jpg);
+  }
+}
+
+.p2__cloud_1, .p2__cloud_2 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.p2__cloud_1 {
+  $width: 82px;
+  $height: 63px;
+  $right: -40px;
+  background-image: url(../images/common_cloud_tiny.png);
+  width: $width;
+  height: $height;
+  right: $right;
+  top: 18%;
+  @include down();
+  @media (min-width: 768px) {
+    width: $width*2;
+    height: $height*2;
+    right: $right*2;
+  }
+}
+.p2__cloud_2 {
+  $width: 30%;
+  $height: 149px/1.9;
+  background-image: url(../images/common_cloud_big.png);
+  width: $width;
+  height: $height;
+  bottom: 0;
+  @include up();
+  @media (min-width: 768px) {
+    width: $width;
+    height: $height*2;
+  }
+}
+
+.p2__t_1 {
+  $left: 10px;
+  @include fnIconSprite(page2_title);
+  @include down();
+  top: 18%;
+  left: $left;
+  @media (min-width: 768px) {
+    @include fnIcon2xSprite(page2_title);
+    left: $left*2;
+  }
+}
+
+.p2__house {
+  $width: 100%;
+  $height: 481px;
+  background-image: url(../images/page2_door.png);
+  background-size: 100% 100%;
+  width: $width;
+  height: $height/2;
+  bottom: 26%;
+  @media (min-width: 768px) {
+    width: $width;
+    height: $height;
+  }
+}
+.p2__elder {
+  $width: 13%;
+  $height: 276px;
+  $left: 19%;
+  background-image: url(../images/page2_elder.png);
+  background-size: 100% 100%;
+  width: $width;
+  height: $height/2;
+  left: $left;
+  bottom: 24%;
+  -webkit-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out;
+  opacity: 0;
+  @media (min-width: 768px) {
+    width: $width;
+    height: $height;
+    left: $left;
+  }
+}
